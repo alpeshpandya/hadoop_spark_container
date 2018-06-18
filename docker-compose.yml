@@ -1,0 +1,9 @@
+version: '2.2'
+services:
+  prototype_service:
+    build:
+      context: .
+    image: prototype_container
+    volumes:
+      - ./bin:/prototype
+    command: bash -c "chmod +x /prototype/setup.sh && /prototype/setup.sh && sleep infinity"
